@@ -130,7 +130,7 @@ def save_qualifying_loans(qualifying_loans):
             csv_path = csv_path + "\qualifying_loans.csv"
             save_csv(header,qualifying_loans,csv_path)
     else:
-        sys.exit(f"Thanks for your applicaiton. You have {len(qualifying_loans)} qualifying loans.")
+        sys.exit("Thanks for your applicaiton. We look forward to serving you.")
 
     csvpath = questionary.text("Please enter the path to save the file:").ask()
     
