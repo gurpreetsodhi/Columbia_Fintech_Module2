@@ -112,7 +112,7 @@ def save_qualifying_loans(qualifying_loans):
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
 
-    header = ["Lender,Max Loan Amount,Max LTV,Max DTI,Min Credit Score,Interest Rate"]
+    header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
 
     # Below code checks if there are any qualifying loans
     if len(qualifying_loans) == 0:
@@ -123,7 +123,7 @@ def save_qualifying_loans(qualifying_loans):
     
     # if the user wants to save the results in a file, then ask for path and ensure the validity of the path before saving the results
     if choice_to_save == "Y":
-        csv_path = questionary.text("Please enter file path for qualifying_loans.csv file?").ask()
+        csv_path = questionary.text("Please enter folder for qualifying_loans.csv file?").ask()
         if not Path(csv_path).exists():
             sys.exit("Please retry with correct path.")
         else:
