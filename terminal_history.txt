@@ -4,3 +4,25 @@
     4  git push
     5  history 50
     6  history 50 > terminal_history.txt
+    7  git status
+    8  git add .
+    9  git commit "added history file"
+   10  git push
+   11  git status
+   12  git commit -m "added history file"
+   13  git push
+   14  git status
+   15  python app.py
+   16  python app.py
+   17  python app.py
+   18  python app.py
+   19  python app.py
+   20  python app.py
+   21  python app.py
+   22  git status
+   23  git add .
+   24  git commit -m "Updated Readme.md"
+   25  git push
+   26  git status
+   27  history 50
+   28  history 50 > terminal_history.txt
