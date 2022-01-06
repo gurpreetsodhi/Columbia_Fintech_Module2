@@ -132,8 +132,7 @@ def save_qualifying_loans(qualifying_loans):
     else:
         sys.exit("Thanks for your applicaiton. We look forward to serving you.")
 
-    csvpath = questionary.text("Please enter the path to save the file:").ask()
-    
+ 
     # check for path validity
 
 
