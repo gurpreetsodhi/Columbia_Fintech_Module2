@@ -144,7 +144,7 @@ def save_csv(header,qualifying_loans,csv_path):
         header, qualifying loans list, csv path
     """
 
-    with open(csvpath, 'w', newline='') as csv_file:
+    with open(csv_path, 'w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(header)
         for loan in qualifying_loans:
