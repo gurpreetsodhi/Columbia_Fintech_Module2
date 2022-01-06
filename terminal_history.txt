@@ -1,0 +1,6 @@
+    1  conda activate dev
+    2  git status
+    3  git commit -m "Loose ends"
+    4  git push
+    5  history 50
+    6  history 50 > terminal_history.txt
