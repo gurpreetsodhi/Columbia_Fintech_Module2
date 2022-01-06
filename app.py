@@ -114,11 +114,14 @@ def save_qualifying_loans(qualifying_loans):
 
     header = ["Lender,Max Loan Amount,Max LTV,Max DTI,Min Credit Score,Interest Rate"]
 
+    # Below code checks if there are any qualifying loans
     if len(qualifying_loans) == 0:
         sys.exit("Sorry, but there are no qualifying loans")
     
+    # Prompt the user if he / she wants to save the results in a file
     choice_to_save = questionary.select("Do you want to save the list of qualifying loans?",choices = ["Y", "N"]).ask()
     
+    # if the user wants to save the results in a file, then ask for path and ensure the validity of the path before saving the results
     if choice_to_save == "Y":
         csv_path = questionary.text("Please enter file path for qualifying_loans.csv file?").ask()
         if not Path(csv_path).exists():
@@ -135,6 +138,12 @@ def save_qualifying_loans(qualifying_loans):
 
 
 def save_csv(header,qualifying_loans,csv_path):
+    """ The function writes the qualifying loans to the csv file
+    
+    Args:
+        header, qualifying loans list, csv path
+    """
+
     with open(csvpath, 'w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(header)
