@@ -118,6 +118,8 @@ def save_qualifying_loans(qualifying_loans):
     
     # check for path validity
 
+
+def save_csv(header,qualifying_loans,csv_path):
     with open(csvpath, 'w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(header)
